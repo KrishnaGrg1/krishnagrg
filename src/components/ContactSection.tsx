@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Send, ExternalLink, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-import.meta.env.VITE_API_KEY ;
+import.meta.env.VITE_API_KEY;
 export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -23,7 +22,7 @@ export default function ContactSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -62,7 +61,7 @@ export default function ContactSection() {
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-4">
-          <span className="text-teal font-mono">04.</span> Get In Touch
+          <span className="text-teal font-mono">05.</span> Get In Touch
           <div className="h-px bg-border flex-grow ml-4"></div>
         </h2>
 
@@ -82,9 +81,7 @@ export default function ContactSection() {
             </p>
 
             <div className="flex flex-col gap-6 mb-8">
-              <div
-                className="flex items-start gap-4 p-4 rounded-lg bg-card hover:shadow-md transition-shadow"
-              >
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:shadow-md transition-shadow">
                 <Mail className="text-teal mt-1" size={22} />
                 <div>
                   <h4 className="font-medium">Email</h4>
@@ -95,13 +92,10 @@ export default function ContactSection() {
                     gkrishnabahadur618@gmail.com
                     <ExternalLink size={14} />
                   </a>
-
                 </div>
               </div>
 
-              <div
-                className="flex items-start gap-4 p-4 rounded-lg bg-card hover:shadow-md transition-shadow"
-              >
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:shadow-md transition-shadow">
                 <MapPin className="text-teal mt-1" size={22} />
                 <div>
                   <h4 className="font-medium">Location</h4>
@@ -115,7 +109,11 @@ export default function ContactSection() {
               className="border-teal text-teal hover:bg-teal/10"
               asChild
             >
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://calendly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Schedule a Call
                 <ExternalLink className="ml-2" size={16} />
               </a>
@@ -128,7 +126,12 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="space-y-6 bg-card p-6 rounded-lg shadow-sm"
             > */}
-            <form action="https://api.web3forms.com/submit" className="space-y-6 bg-card p-6 rounded-lg shadow-sm" method="POST" data-form>
+            <form
+              action="https://api.web3forms.com/submit"
+              className="space-y-6 bg-card p-6 rounded-lg shadow-sm"
+              method="POST"
+              data-form
+            >
               <input
                 type="hidden"
                 name="access_key"
@@ -142,7 +145,7 @@ export default function ContactSection() {
                     htmlFor="name"
                     className={cn(
                       "block font-medium transition-colors duration-200",
-                      focusedField === "name" ? "text-teal" : ""
+                      focusedField === "name" ? "text-teal" : "",
                     )}
                   >
                     Name
@@ -163,7 +166,7 @@ export default function ContactSection() {
                     htmlFor="email"
                     className={cn(
                       "block font-medium transition-colors duration-200",
-                      focusedField === "email" ? "text-teal" : ""
+                      focusedField === "email" ? "text-teal" : "",
                     )}
                   >
                     Email
@@ -186,7 +189,7 @@ export default function ContactSection() {
                   htmlFor="subject"
                   className={cn(
                     "block font-medium transition-colors duration-200",
-                    focusedField === "subject" ? "text-teal" : ""
+                    focusedField === "subject" ? "text-teal" : "",
                   )}
                 >
                   Subject
@@ -207,7 +210,7 @@ export default function ContactSection() {
                   htmlFor="message"
                   className={cn(
                     "block font-medium transition-colors duration-200",
-                    focusedField === "message" ? "text-teal" : ""
+                    focusedField === "message" ? "text-teal" : "",
                   )}
                 >
                   Message

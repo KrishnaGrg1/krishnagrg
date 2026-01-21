@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -8,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ExperienceSection from "@/components/ExperienceSection";
 
 const Index = () => {
   return (
@@ -19,6 +19,7 @@ const Index = () => {
           <AboutSection />
           <ProjectsSection />
           <SkillsSection />
+          <ExperienceSection />
           <ContactSection />
         </main>
         <Footer />

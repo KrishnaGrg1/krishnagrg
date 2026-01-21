@@ -21,9 +21,9 @@ const skills: Skill[] = [
     category: "frontend",
   },
   {
-    name:"Tailwind CSS",
-    icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    category:"frontend"
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    category: "frontend",
   },
   {
     name: "JavaScript",
@@ -72,9 +72,13 @@ const skills: Skill[] = [
   },
 ];
 
-
-
-const filters: SkillCategory[] = ["all", "frontend", "backend", "languages", "tools"];
+const filters: SkillCategory[] = [
+  "all",
+  "frontend",
+  "backend",
+  "languages",
+  "tools",
+];
 
 export default function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -90,7 +94,7 @@ export default function SkillsSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -116,9 +120,10 @@ export default function SkillsSection() {
     };
   }, []);
 
-  const filteredSkills = activeFilter === "all"
-    ? skills
-    : skills.filter(skill => skill.category === activeFilter);
+  const filteredSkills =
+    activeFilter === "all"
+      ? skills
+      : skills.filter((skill) => skill.category === activeFilter);
 
   return (
     <section
@@ -141,7 +146,7 @@ export default function SkillsSection() {
                 "px-4 py-2 rounded-full font-medium transition-colors",
                 activeFilter === filter
                   ? "bg-teal text-navy"
-                  : "bg-secondary text-foreground hover:bg-secondary/80"
+                  : "bg-secondary text-foreground hover:bg-secondary/80",
               )}
             >
               {filter.charAt(0).toUpperCase() + filter.slice(1)}
@@ -156,7 +161,7 @@ export default function SkillsSection() {
               ref={(el) => (skillsRef.current[index] = el)}
               className={cn(
                 "opacity-100 bg-card rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-default",
-                `animation-delay-${(index % 5) * 100}`
+                `animation-delay-${(index % 5) * 100}`,
               )}
             >
               <img
@@ -164,7 +169,8 @@ export default function SkillsSection() {
                 alt={skill.name}
                 className={cn(
                   "w-12 h-12 mx-auto mb-3 object-contain",
-                  (skill.name === "Next.js" || skill.name === "Express") && "dark:invert"
+                  (skill.name === "Next.js" || skill.name === "Express") &&
+                    "dark:invert",
                 )}
               />
               <h3 className="font-medium">{skill.name}</h3>
