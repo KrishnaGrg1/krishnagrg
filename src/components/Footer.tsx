@@ -18,19 +18,36 @@ export default function Footer() {
               <span className="absolute -bottom-1 left-0 h-0.5 w-12 bg-teal"></span>
             </h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              A passionate full-stack developer specializing in creating engaging digital experiences with modern web technologies.
+              A passionate full-stack developer specializing in creating
+              engaging digital experiences with modern web technologies.
             </p>
             <div className="flex gap-4 mb-4">
-              <a href="https://github.com/KrishnaGrg1/" aria-label="GitHub" className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform">
+              <a
+                href="https://github.com/KrishnaGrg1/"
+                aria-label="GitHub"
+                className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform"
+              >
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/krishna-bahadur-gurung-60933a2a6/" aria-label="LinkedIn" className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform">
+              <a
+                href="https://www.linkedin.com/in/krishna-bahadur-gurung-60933a2a6/"
+                aria-label="LinkedIn"
+                className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="https://x.com/krishna_ba63631" aria-label="Twitter" className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform">
+              <a
+                href="https://x.com/krishna_ba63631"
+                aria-label="Twitter"
+                className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="mailto:gkrishnabahadur618@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform">
+              <a
+                href="mailto:gkrishnabahadur618@gmail.com"
+                aria-label="Email"
+                className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform"
+              >
                 <Mail size={20} />
               </a>
             </div>
@@ -48,13 +65,22 @@ export default function Footer() {
               <span className="absolute -bottom-1 left-0 h-0.5 w-12 bg-teal"></span>
             </h3>
             <nav className="flex flex-col space-y-2">
-              {["home", "about", "projects", "skills", "contact"].map((section) => (
+              {[
+                { name: "Home", href: "#home" },
+                { name: "About", href: "#about" },
+                { name: "Projects", href: "#projects" },
+                { name: "Skills", href: "#skills" },
+                { name: "Experience", href: "#experience" },
+                { name: "Education", href: "#education" },
+                { name: "Blog", href: "/blog" },
+                { name: "Contact", href: "#contact" },
+              ].map((link) => (
                 <a
-                  key={section}
-                  href={`#${section}`}
+                  key={link.name}
+                  href={link.href}
                   className="hover:text-teal transition-colors hover:translate-x-1 transform-gpu inline-flex"
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {link.name}
                 </a>
               ))}
             </nav>
@@ -69,14 +95,17 @@ export default function Footer() {
             <div className="space-y-2 mb-4">
               <p className="flex items-center gap-2">
                 <Mail size={16} className="text-teal" />
-                <a href="mailto:gkrishnabahadur618@gmail.com" className="hover:text-teal transition-colors">
+                <a
+                  href="mailto:gkrishnabahadur618@gmail.com"
+                  className="hover:text-teal transition-colors"
+                >
                   gkrishnabahadur618@gmail.com
                 </a>
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 items-start">
-              <Button className="bg-teal text-navy hover:bg-teal-dark">
-                <a href="/krishna-cv.pdf" download>
+              <Button className="bg-teal text-navy hover:bg-teal-dark" asChild>
+                <a href="/krishna.pdf" download="Krishna_Bahadur_Gurung_CV.pdf">
                   Download CV
                 </a>
               </Button>
@@ -96,9 +125,13 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-sm text-muted-foreground">
-              <a href="#" className="hover:text-teal">Privacy Policy</a>
+              <a href="#" className="hover:text-teal">
+                Privacy Policy
+              </a>
               {" • "}
-              <a href="#" className="hover:text-teal">Terms of Service</a>
+              <a href="#" className="hover:text-teal">
+                Terms of Service
+              </a>
             </p>
           </div>
         </div>

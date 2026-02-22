@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-type SkillCategory = "all" | "frontend" | "backend" | "tools" | "languages";
+type SkillCategory = "all" | "frontend" | "backend" | "databases" | "tools" | "languages";
 
 interface Skill {
   name: string;
@@ -10,30 +10,11 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  {
-    name: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    category: "frontend",
-  },
-  {
-    name: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    category: "frontend",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    category: "frontend",
-  },
+  // Languages
   {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     category: "languages",
-  },
-  {
-    name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    category: "frontend",
   },
   {
     name: "TypeScript",
@@ -41,42 +22,116 @@ const skills: Skill[] = [
     category: "languages",
   },
   {
-    name: "Next.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    category: "languages",
+  },
+  {
+    name: "SQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg",
+    category: "languages",
+  },
+  
+  // Frontend
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     category: "frontend",
   },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    category: "frontend",
+  },
+  {
+    name: "TanStack Start",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    category: "frontend",
+  },
+  {
+    name: "React Native",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    category: "frontend",
+  },
+  {
+    name: "SvelteKit",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+    category: "frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    category: "frontend",
+  },
+  
+  // Backend
   {
     name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     category: "backend",
   },
   {
-    name: "Express",
+    name: "Express.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     category: "backend",
   },
   {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    name: "NestJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
     category: "backend",
   },
+  
+  // Databases
   {
     name: "PostgreSQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    category: "backend",
+    category: "databases",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    category: "databases",
+  },
+  
+  // Tools & Services
+  {
+    name: "BetterAuth",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg",
+    category: "tools",
+  },
+  {
+    name: "JWT",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg",
+    category: "tools",
+  },
+  {
+    name: "Cloudinary",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
+    category: "tools",
   },
   {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     category: "tools",
   },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    category: "tools",
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    category: "tools",
+  },
 ];
 
 const filters: SkillCategory[] = [
   "all",
+  "languages",
   "frontend",
   "backend",
-  "languages",
+  "databases",
   "tools",
 ];
 
@@ -169,7 +224,7 @@ export default function SkillsSection() {
                 alt={skill.name}
                 className={cn(
                   "w-12 h-12 mx-auto mb-3 object-contain",
-                  (skill.name === "Next.js" || skill.name === "Express") &&
+                  (skill.name === "Next.js" || skill.name === "Express.js" || skill.name === "GitHub") &&
                     "dark:invert",
                 )}
               />

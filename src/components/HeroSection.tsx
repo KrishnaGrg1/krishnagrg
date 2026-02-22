@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +11,7 @@ export default function HeroSection() {
     { type: "image", src: "/dashboard.png" },
     { type: "video", src: "/dashboard1.mp4" },
     { type: "image", src: "/dashboard1.png" },
-     { type: "video", src: "/dashboard2.mp4" },
+    { type: "video", src: "/dashboard2.mp4" },
   ];
 
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function HeroSection() {
     const createParticles = () => {
       const particleCount = Math.min(
         50,
-        Math.floor((canvas.width * canvas.height) / 8000)
+        Math.floor((canvas.width * canvas.height) / 8000),
       );
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -105,7 +104,10 @@ export default function HeroSection() {
 
   const currentMedia = mediaItems[currentIndex];
   return (
-    <section id="home" className="relative mt-10 md:mt-25 min-h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative mt-10 md:mt-25 min-h-screen flex items-center overflow-hidden"
+    >
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div className="container mx-auto px-4 z-10">
         {/* <div className="max-w-3xl"> */}
@@ -123,37 +125,54 @@ export default function HeroSection() {
             </h2>
             <p className="text-slate text-lg md:text-xl mb-8 max-w-xl opacity-0 animate-fade-in animation-delay-300">
               I'm a full-stack developer specializing in building exceptional
-              digital experiences. Currently, I'm focused on building accessible,
-              human-centered products.
+              digital experiences. Currently, I'm focused on building
+              accessible, human-centered products.
             </p>
             <div className="flex flex-wrap gap-4 mb-12 opacity-0 animate-fade-in animation-delay-400">
-              <Button size="lg" className="bg-teal text-navy hover:bg-teal-dark">
+              <Button
+                size="lg"
+                className="bg-teal text-navy hover:bg-teal-dark"
+              >
                 View My Work
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-teal text-teal hover:bg-teal/10"
+                asChild
               >
-                <a href="/krishna-cv.pdf" download>
+                <a href="/krishna.pdf" download="Krishna_Bahadur_Gurung_CV.pdf">
                   Download CV
                 </a>
               </Button>
             </div>
 
             <div className="flex gap-6 opacity-0 animate-fade-in animation-delay-500">
-              <a href="https://github.com/KrishnaGrg1" className="hover:text-teal text-muted-foreground transition-colors">
+              <a
+                href="https://github.com/KrishnaGrg1"
+                className="hover:text-teal text-muted-foreground transition-colors"
+              >
                 <Github size={24} />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/krishna-bahadur-gurung-60933a2a6" className="hover:text-teal text-muted-foreground transition-colors">
+              <a
+                href="https://www.linkedin.com/in/krishna-bahadur-gurung-60933a2a6"
+                className="hover:text-teal text-muted-foreground transition-colors"
+              >
                 <Linkedin size={24} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="https://x.com/krishna_ba63631" aria-label="Twitter" className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform">
+              <a
+                href="https://x.com/krishna_ba63631"
+                aria-label="Twitter"
+                className="text-muted-foreground hover:text-teal transition-all hover:scale-110 transform"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="mailto:gkrishnabahadur618@gmail.com" className="hover:text-teal text-muted-foreground transition-colors">
+              <a
+                href="mailto:gkrishnabahadur618@gmail.com"
+                className="hover:text-teal text-muted-foreground transition-colors"
+              >
                 <Mail size={24} />
                 <span className="sr-only">Email</span>
               </a>
@@ -171,7 +190,7 @@ export default function HeroSection() {
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
                   className="absolute inset-0 w-full h-full"
-                  whileHover={{ scale: 1.03 }}  // subtle scale on hover
+                  whileHover={{ scale: 1.03 }} // subtle scale on hover
                 >
                   {currentMedia.type === "video" ? (
                     <video
@@ -194,8 +213,6 @@ export default function HeroSection() {
               )}
             </AnimatePresence>
           </div>
-
-
         </div>
       </div>
 
