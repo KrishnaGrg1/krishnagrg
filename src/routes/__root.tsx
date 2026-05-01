@@ -15,10 +15,20 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "Krishna Bahadur Gurung - Full Stack Developer",
+      },
+      {
+        name: "description",
+        content:
+          "Portfolio of Krishna Bahadur Gurung, a full stack developer from Pokhara, Nepal building React, TanStack, Go, and TypeScript products.",
       },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.png",
+      },
       {
         rel: "stylesheet",
         href: appCss,
