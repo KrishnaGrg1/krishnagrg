@@ -85,7 +85,7 @@ const experience = [
     period: "Apr 2025 - Jul 2025",
     company: "BrandBuilder",
     role: "Full Stack Developer Intern",
-    location: "Remote",
+    location: "Onsite(Pokhara)",
     points: [
       "Developed cross-platform mobile applications using React Native, Express.js, and TypeScript.",
       "Built reusable UI component libraries and integrated third-party REST APIs for authentication and data services.",
@@ -288,12 +288,12 @@ function SiteNav({
           ))}
         </div>
         <div className="flex items-center gap-2">
-          <Badge
+          {/* <Badge
             className="hidden border-[var(--p-rule)] bg-transparent text-[var(--p-text)] sm:inline-flex"
             variant="outline"
           >
             Selected work
-          </Badge>
+          </Badge> */}
           <ThemeToggle isDark={isDark} onToggleTheme={onToggleTheme} />
         </div>
       </nav>
