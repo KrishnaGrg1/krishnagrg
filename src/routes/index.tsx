@@ -10,7 +10,6 @@ import {
   LinkedinLogoIcon,
   MapPinIcon,
   MoonIcon,
-  PhoneIcon,
   SunIcon,
 } from "@phosphor-icons/react"
 
@@ -55,7 +54,6 @@ const techTicker = [
 const stats = [
   { value: "2+", label: "Years experience" },
   { value: "5+", label: "Live products" },
-  { value: "175", label: "Hackathon applicants" },
 ]
 
 const experience = [
@@ -215,14 +213,8 @@ const contactLinks = [
   {
     label: "LinkedIn",
     value: "krishna-bahadur-gurung",
-    href: "https://linkedin.com/in/krishna-bahadur-gurung",
+    href: "https://linkedin.com/in/krishna-bahadur-gurung-60933a2a6",
     icon: LinkedinLogoIcon,
-  },
-  {
-    label: "Phone",
-    value: "+977 980 415 8304",
-    href: "tel:+9779804158304",
-    icon: PhoneIcon,
   },
 ]
 
@@ -278,10 +270,11 @@ function SiteNav({
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--p-ink)] bg-[var(--p-bg)]/94 px-4 py-3 backdrop-blur sm:px-6 lg:px-12">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5">
         <a
-          className="text-2xl font-[var(--font-display)] tracking-[0.12em] uppercase"
+          className="inline-flex items-center"
           href="#"
+          aria-label="Krishna Bahadur Gurung home"
         >
-          KBG
+          <img alt="KBG" className="size-9 object-cover" src="/favicon.png" />
         </a>
         <div className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
@@ -343,11 +336,6 @@ function HeroSection() {
       }}
     >
       <div className="mx-auto grid w-full max-w-7xl grid-rows-[auto_1fr_auto]">
-        <div className="flex flex-col justify-between gap-3 border-b border-[var(--p-rule)] pb-6 text-[0.67rem] tracking-[0.18em] text-[var(--p-muted)] uppercase sm:flex-row">
-          <span>Full Stack Developer - Pokhara, Nepal</span>
-          <span>Est. 2022 - BCA Candidate</span>
-        </div>
-
         <div className="grid content-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.4fr_0.6fr] lg:items-end">
           <div>
             <Badge
@@ -402,7 +390,7 @@ function HeroSection() {
           </Panel>
         </div>
 
-        <div className="grid border-t border-[var(--p-ink)] sm:grid-cols-3">
+        <div className="grid border-t border-[var(--p-ink)] sm:grid-cols-2">
           {stats.map((stat) => (
             <div
               className="border-b border-[var(--p-rule)] py-6 last:border-r-0 sm:border-r sm:border-b-0 sm:px-6 first:sm:pl-0"
