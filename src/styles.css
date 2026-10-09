@@ -178,3 +178,42 @@
     @apply font-mono;
   }
 }
+
+.prose-custom h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--p-ink);
+}
+
+.prose-custom h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--p-ink);
+}
+
+.prose-custom p {
+  margin-top: 1.25rem;
+}
+
+.prose-custom ul {
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-custom li {
+  margin-top: 0.5rem;
+}
+
+.prose-custom code {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+}
