@@ -9,21 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WorkRouteImport } from './routes/work'
-import { Route as ResumeRouteImport } from './routes/resume'
-import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ResumeRouteImport } from './routes/resume'
+import { Route as WorkRouteImport } from './routes/work'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 
-const WorkRoute = WorkRouteImport.update({
-  id: '/work',
-  path: '/work',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResumeRoute = ResumeRouteImport.update({
-  id: '/resume',
-  path: '/resume',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -31,9 +26,14 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ResumeRoute = ResumeRouteImport.update({
+  id: '/resume',
+  path: '/resume',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -98,18 +98,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/work': {
-      id: '/work'
-      path: '/work'
-      fullPath: '/work'
-      preLoaderRoute: typeof WorkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resume': {
-      id: '/resume'
-      path: '/resume'
-      fullPath: '/resume'
-      preLoaderRoute: typeof ResumeRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -119,11 +112,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/resume': {
+      id: '/resume'
+      path: '/resume'
+      fullPath: '/resume'
+      preLoaderRoute: typeof ResumeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
