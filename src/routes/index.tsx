@@ -3,6 +3,7 @@ import { ArrowRightIcon, ArrowUpRightIcon } from "@phosphor-icons/react"
 import { Section } from "../components/section"
 import { projects } from "../data/projects"
 import { blogPosts } from "../data/blog"
+import { treks } from "#/data/travel"
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -11,6 +12,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const selectedProjects = projects.slice(0, 3)
   const selectedPosts = blogPosts.slice(0, 3)
+  const selectedTravels = treks.slice(0, 3)
 
   return (
     <main className="mx-auto max-w-3xl px-6 pt-16 pb-24">
@@ -174,6 +176,39 @@ function HomePage() {
         </Section>
       </div>
 
+      {/* Travel */}
+      <div className="mt-24">
+        <Section title="Travel">
+          <div className="space-y-8">
+            {selectedTravels.map((travel) => (
+              <Link
+                key={travel.slug}
+                to="/travel/$slug"
+                params={{ slug: travel.slug }}
+                className="group block"
+              >
+                {/* <div className="text-xs text-[var(--p-muted)]">
+                  {travel.date} · {post.readTime}
+                </div> */}
+
+                <h3 className="mt-2 font-medium text-[var(--p-ink)] group-hover:underline group-hover:underline-offset-4">
+                  {travel.title}
+                </h3>
+
+                <p className="mt-1 text-sm leading-6">{travel.note}</p>
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            to="/blog"
+            className="mt-7 inline-flex items-center gap-2 text-sm text-[var(--p-muted)] hover:text-[var(--p-ink)]"
+          >
+            Read all travelling
+            <ArrowRightIcon className="size-3" />
+          </Link>
+        </Section>
+      </div>
       {/* Contact */}
       <div className="mt-24">
         <Section title="Contact">

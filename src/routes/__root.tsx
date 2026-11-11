@@ -10,7 +10,23 @@ import { TanStackDevtools } from "@tanstack/react-devtools"
 import appCss from "../styles.css?url"
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import { ModeToggle } from "@/components/ui/mode-toggle"
-
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
+const navItems = [
+  { label: "Home", to: "/" },
+  { label: "Projects", to: "/projects" },
+  { label: "Work", to: "/work" },
+  { label: "Writing", to: "/blog" },
+  { label: "Travel", to: "/travel" },
+  { label: "Resume", to: "/resume" },
+] as const
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -72,56 +88,58 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   Krishna Gurung
                 </Link>
 
-                <nav className="flex items-center gap-6 text-sm">
-                  <Link
-                    to="/"
-                    className="transition-colors hover:text-foreground/70"
-                    activeProps={{
-                      className: "text-foreground",
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="/projects"
-                    className="transition-colors hover:text-foreground/70"
-                    activeProps={{
-                      className: "text-foreground",
-                    }}
-                  >
-                    Projects
-                  </Link>
-
-                  <Link
-                    to="/work"
-                    className="transition-colors hover:text-foreground/70"
-                    activeProps={{
-                      className: "text-foreground",
-                    }}
-                  >
-                    Work
-                  </Link>
-
-                  <Link
-                    to="/blog"
-                    className="transition-colors hover:text-foreground/70"
-                    activeProps={{
-                      className: "text-foreground",
-                    }}
-                  >
-                    Writing
-                  </Link>
-                  <Link
-                    to="/resume"
-                    className="transition-colors hover:text-foreground/70"
-                    activeProps={{
-                      className: "text-foreground",
-                    }}
-                  >
-                    Resume
-                  </Link>
+                <nav className="hidden items-center gap-6 text-sm md:flex">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className="transition-colors hover:text-foreground/70"
+                      activeProps={{ className: "text-foreground" }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                   <ModeToggle />
                 </nav>
+
+                {/* Mobile navigation */}
+                <div className="ml-auto md:hidden">
+                  <Sheet>
+                    <SheetTrigger
+                      className="inline-flex size-9 items-center justify-center rounded-md hover:bg-accent"
+                      aria-label="Open navigation menu"
+                    >
+                      <Menu className="size-5" />
+                    </SheetTrigger>
+
+                    {/* 2. Add `p-6` or `px-6 py-6` to ensure proper internal spacing inside the drawer */}
+                    <SheetContent side="right" className="w-[280px] p-6">
+                      <SheetHeader>
+                        <SheetTitle>Krishna Gurung</SheetTitle>
+                      </SheetHeader>
+
+                      <nav className="mt-8 flex flex-col gap-5">
+                        {navItems.map((item) => (
+                          <SheetClose asChild key={item.to}>
+                            <Link
+                              to={item.to}
+                              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                              activeProps={{
+                                className: "font-medium text-foreground",
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          </SheetClose>
+                        ))}
+
+                        <div className="border-t pt-4">
+                          <ModeToggle />
+                        </div>
+                      </nav>
+                    </SheetContent>
+                  </Sheet>
+                </div>
               </div>
             </header>
 
