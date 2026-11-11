@@ -173,7 +173,22 @@ function HeroVideo({
     observer.observe(el)
     return () => observer.disconnect()
   }, [])
+  const isCloudinaryEmbed = video.src.includes("player.cloudinary.com/embed")
+  if (isCloudinaryEmbed) {
+    const embedUrl = new URL(video.src)
+    embedUrl.searchParams.set("autoplay", "true")
+    embedUrl.searchParams.set("muted", "true")
 
+    return (
+      <iframe
+        src={embedUrl.toString()}
+        title={`${title} video`}
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        allowFullScreen
+        className="absolute inset-0 h-full w-full border-0"
+      />
+    )
+  }
   return (
     <video
       ref={ref}
@@ -350,21 +365,33 @@ export function Lightbox({
  * Works for landscape and portrait phone videos: the frame is always 16:9
  * and the video is letterboxed inside it, never cropped.
  */
+
 export function VideoPlayer({
   video,
 }: {
   video: { src: string; poster?: string; title?: string }
 }) {
+  const isCloudinaryEmbed = video.src.includes("player.cloudinary.com/embed")
+
   return (
     <figure>
-      <video
-        src={video.src}
-        poster={video.poster || undefined}
-        controls
-        playsInline
-        preload="metadata"
-        className="aspect-video w-full rounded-md bg-black object-contain"
-      />
+      {isCloudinaryEmbed ? (
+        <iframe
+          src={video.src}
+          width="640"
+          height="360"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        ></iframe>
+      ) : (
+        <video
+          src={video.src}
+          poster={video.poster || undefined}
+          controls
+          playsInline
+          preload="metadata"
+          className="aspect-video w-full rounded-md bg-black object-contain"
+        />
+      )}
 
       {video.title ? (
         <figcaption className="mt-2 text-xs text-[var(--p-muted)]">

@@ -201,7 +201,7 @@ function HomePage() {
           </div>
 
           <Link
-            to="/blog"
+            to="/travel"
             className="mt-7 inline-flex items-center gap-2 text-sm text-[var(--p-muted)] hover:text-[var(--p-ink)]"
           >
             Read all travelling

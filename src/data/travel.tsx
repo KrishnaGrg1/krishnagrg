@@ -62,11 +62,11 @@ export const treks: Trek[] = [
     slug: "annapurna-base-camp",
     video: [
       {
-        src: "/travel/annapurna-base-camp/1.MOV",
+        src: "/travel/annapurna-base-camp/1.mp4",
         poster: "",
       },
       {
-        src: "/travel/annapurna-base-camp/2.MOV",
+        src: "/travel/annapurna-base-camp/2.mp4",
         poster: "",
       },
     ],
@@ -146,15 +146,77 @@ export const treks: Trek[] = [
       },
       {
         day: "Day 4",
-        title: "Annapurna Base Camp → MBC → Deurali → Bamboo → Lower Sinuwa",
+        title:
+          "Annapurna Base Camp → MBC → Deurali → Himalaya → Dovan → Bamboo",
         detail:
-          "After spending time at Annapurna Base Camp, we started our return journey. We retraced our steps through Machhapuchhre Base Camp, Deurali, Himalaya, Dovan, and Bamboo before continuing towards Lower Sinuwa. It was a long day of descending, but seeing the familiar trails from a different direction made the journey interesting. By the end of the day, we had made it to Lower Sinuwa.",
+          "After spending time at Annapurna Base Camp, we started our return journey. We retraced our steps through Machhapuchhre Base Camp, Deurali, Himalaya, and Dovan before reaching Bamboo. It was a long day of steady descending through changing landscapes, but seeing the familiar trails from a different perspective made the trek enjoyable. By the end of the day, we settled down for the night in Bamboo.",
       },
       {
         day: "Day 5",
-        title: "Lower Sinuwa → Chhomrong → Jhinu Danda → Pokhara",
+        title:
+          "Bamboo → Upper Sinuwa → Lower Sinuwa → Chhomrong → Jhinu Danda → Pokhara",
         detail:
-          "The final day of the trek began with our descent from Lower Sinuwa towards Chhomrong and Jhinu Danda. After reaching Jhinu Danda, we took a jeep or local transport back to Pokhara. Just like that, our five-day Annapurna Base Camp adventure came to an end. We returned with tired legs, plenty of photographs, and memories that made the entire journey worthwhile.",
+          "The final day of the trek began with our descent from Bamboo, climbing past Sinuwa and continuing through Chhomrong down to Jhinu Danda. After reaching Jhinu Danda, we took local transport back to Pokhara. Just like that, our five-day Annapurna Base Camp adventure came to an end. We returned with tired legs, plenty of photographs, and memories that made the entire journey worthwhile.",
+      },
+    ],
+  },
+  {
+    slug: "mardi-himal",
+    title: "Mardi Himal Base Camp",
+    region: "Annapurna, Nepal",
+    altitude: "4,500 m",
+    year: "2022",
+    note: "A spontaneous 3-day trek in January 2022 funded by our Deusi Bhailo collections. From winter snowfall along the ridge to playing cards at High Camp and catching sunrise over Machhapuchhre, it was an unforgettable adventure with friends.",
+
+    photos: gallery("mardi-himal", "Mardi Himal", 7),
+
+    content: (
+      <article>
+        <p>
+          The Mardi Himal trek in January 2022 was extra special because it was
+          completely self-funded through our Deusi Bhailo earnings from Tihar.
+          Armed with high spirits and shared memories from the festival, we
+          decided to turn our collected funds into a 3-day winter mountain
+          getaway.
+        </p>
+
+        <p>
+          Leaving Pokhara in the afternoon, we drove through Ghalel village to
+          start our trek toward Forest Camp. As we pushed higher toward High
+          Camp the next day, winter set in. Soft snowfall began to drift down
+          over the forest ridge, transforming the trail into a surreal winter
+          landscape.
+        </p>
+
+        <p>
+          Laughter, card games at the lodge, cold winds, and walking through
+          freshly fallen snow kept our energy high. Pushing up to Mardi Himal
+          Base Camp early on the third morning rewarded us with an unforgettable
+          sunrise, revealing the dramatic face of Machhapuchhre (Fishtail) and
+          the Annapurna range bathed in golden morning light.
+        </p>
+      </article>
+    ),
+
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Pokhara → Ghalel (Jeep) → Forest Camp",
+        detail:
+          "We set off from Pokhara around 2:00 PM in a jeep, taking the scenic route past Ghalel village. From the trailhead, we began our climb through quiet rhododendron and oak trails, arriving at Forest Camp by evening to settle in for our first night in the mountains.",
+      },
+      {
+        day: "Day 2",
+        title: "Forest Camp → Rest Camp → Low Camp → High Camp",
+        detail:
+          "A day of continuous altitude gain along the narrow ridge. Passing Rest Camp and Low Camp, the tree line gave way to wide mountain views. As we approached High Camp, fresh snowfall began to blanket the path—a mesmerizing winter experience. We spent the evening warming up at the tea house, playing cards, and enjoying the snow.",
+      },
+      {
+        day: "Day 3",
+        title: "High Camp → Mardi Himal Base Camp → High Camp → Pokhara",
+        altitude: "4,500 m",
+        detail:
+          "We started before dawn for the final push to Mardi Himal Base Camp. Reaching the viewpoint at sunrise, we were greeted by panoramic views of Machhapuchhre and Annapurna South up close. After soaking in the scenery, we descended back to High Camp and retraced our steps down the trail, taking a jeep back to Pokhara by evening.",
       },
     ],
   },
@@ -183,23 +245,23 @@ export const treks: Trek[] = [
     photos: gallery("kori", "Kori", 17),
     video: [
       {
-        src: "/travel/kori/1.mov",
+        src: "/travel/kori/1.mp4",
         poster: "",
       },
       {
-        src: "/travel/kori/2.mov",
+        src: "/travel/kori/2.mp4",
         poster: "",
       },
       {
-        src: "/travel/kori/3.mov",
+        src: "/travel/kori/3.mp4",
         poster: "",
       },
       {
-        src: "/travel/kori/4.mov",
+        src: "/travel/kori/4.mp4",
         poster: "",
       },
       {
-        src: "/travel/kori/5.mov",
+        src: "/travel/kori/5.mp4",
         poster: "",
       },
     ],

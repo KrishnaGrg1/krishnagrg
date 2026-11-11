@@ -54,14 +54,14 @@ function TravelPage() {
         ))}
       </div>
 
-      {/* {open ? (
+      {open ? (
         <Lightbox
           photos={open.photos}
           index={open.index}
           onChange={(index) => setOpen({ photos: open.photos, index })}
           onClose={() => setOpen(null)}
         />
-      ) : null} */}
+      ) : null}
     </main>
   )
 }
