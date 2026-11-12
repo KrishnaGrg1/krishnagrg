@@ -162,6 +162,17 @@ export const treks: Trek[] = [
   },
   {
     slug: "mardi-himal",
+    video: [
+      {
+        src: "/travel/mardi-himal/1.mp4",
+        poster: "",
+      },
+      {
+        src: "/travel/mardi-himal/2.mp4",
+        poster: "",
+      },
+    ],
+
     title: "Mardi Himal Base Camp",
     region: "Annapurna, Nepal",
     altitude: "4,500 m",
@@ -169,7 +180,6 @@ export const treks: Trek[] = [
     note: "A spontaneous 3-day trek in January 2022 funded by our Deusi Bhailo collections. From winter snowfall along the ridge to playing cards at High Camp and catching sunrise over Machhapuchhre, it was an unforgettable adventure with friends.",
 
     photos: gallery("mardi-himal", "Mardi Himal", 7),
-
     content: (
       <article>
         <p>
@@ -220,21 +230,6 @@ export const treks: Trek[] = [
       },
     ],
   },
-  // {
-  //   slug: "mardi-himal",
-  //   title: "Mardi Himal",
-  //   region: "Annapurna, Nepal",
-  //   note: "Write one or two lines here about what this trek was like for you.",
-  //   photos: gallery("mardi-himal", "Mardi Himal", 0),
-  // },
-  // {
-  //   slug: "khoke-danda",
-  //   title: "Khoke Danda",
-  //   region: "Annapurna, Nepal",
-  //   note: "Write one or two lines here about what this trek was like for you.",
-  //   photos: gallery("khoke-danda", "Khoke Danda", 0),
-  // },
-
   {
     slug: "kori",
     title: "Kori",
@@ -327,6 +322,71 @@ export const treks: Trek[] = [
         title: "Exploring Sikles → Pokhara",
         detail:
           "Woke up early, took some photographs, and spent time exploring the beautiful village of Sikles. After enjoying the peaceful surroundings and reflecting on the journey, we hired a jeep and returned to Pokhara. Even though the trek was over, I honestly didn't feel like leaving. The mountain scenery, the kindness of the people we met, and the memories we created together made this a journey I will always remember.",
+      },
+    ],
+  },
+  // {
+  //   slug: "mardi-himal",
+  //   title: "Mardi Himal",
+  //   region: "Annapurna, Nepal",
+  //   note: "Write one or two lines here about what this trek was like for you.",
+  //   photos: gallery("mardi-himal", "Mardi Himal", 0),
+  // },
+
+  {
+    slug: "khoke-danda",
+    video: [
+      {
+        src: "/travel/khoke-danda/4.mp4",
+        poster: "",
+      },
+      {
+        src: "/travel/khoke-danda/1.mp4",
+        poster: "",
+      },
+      {
+        src: "/travel/khoke-danda/2.mp4",
+        poster: "",
+      },
+      {
+        src: "/travel/khoke-danda/3.mp4",
+        poster: "",
+      },
+    ],
+    title: "Khoke Danda",
+    region: "Annapurna, Nepal",
+    year: "2025",
+    note: "A two-day adventure with seven friends, rainy trails, beautiful rhododendron forests, and unexpected changes of plan. From an unforgettable evening at Mohore Danda to a clear sunrise over the mountains, every moment became a memory.",
+    photos: gallery("khoke-danda", "Khoke Danda", 18),
+
+    content: (
+      <p>
+        What started as a trip planned for six people turned into an adventure
+        with eight of us. Despite the rainy and foggy weather on the first day
+        and an unexpected accommodation problem at Khoke Danda, we made the most
+        of the journey. Staying at Mohore Danda turned out to be a great
+        decision, where we spent the evening laughing, dancing, and playing
+        cards. The following morning rewarded us with a beautiful sunrise and
+        mountain views before we explored Fulbari, Poon Hill, and Ghorepani on
+        our way back to Pokhara. It was a short trek filled with unexpected
+        moments, friendship, and memories worth keeping.
+      </p>
+    ),
+
+    itinerary: [
+      {
+        day: "Day 1",
+        title:
+          "Pokhara → Bhanthati → Ama Cottage, Taprang → Khoke Danda → Mohore Danda",
+        detail:
+          "We started our journey early in the morning, around 6 AM, from Harichowk, Pokhara. Although we had originally planned the trip for six people, our group eventually grew to eight. We hired a jeep at Harichowk, had our breakfast there, and headed directly towards Bhanthati. After reaching Bhanthati, we had lunch and took some time to rest before beginning our trek.\n\nUnfortunately, the weather was not on our side. It was a rainy and foggy day, and visibility was quite poor. However, the trail was surrounded by beautiful rhododendron trees. Their natural beauty, together with the dense forest, made the journey enjoyable despite the unpleasant weather.\n\nAfter walking through the forest, we reached Ama Cottage in Taprang. There was a relatively flat and open area where we took a break, clicked photographs, enjoyed some snacks, and, as usual, some of my friends started making TikTok videos. After spending some time there, we continued towards Khoke Danda, enjoying the natural scenery along the way.\n\nWe had already booked accommodation for all eight of us at Appa Cottage in Khoke Danda. Unfortunately, due to a misunderstanding with the hotel staff, our reservation was not available when we arrived. Instead of getting stuck there, we decided to continue towards Mohore Danda. Looking back, it turned out to be a great decision because several rooms were available, and we managed to arrange accommodation for everyone.\n\nWe stayed at the community lodge at Mohore Danda, associated with Mahabir Pun's community tourism initiative. After settling in, we spent the evening laughing, dancing, cracking jokes, playing cards, and enjoying each other's company. Sometimes, the unexpected parts of a journey become the best memories.",
+      },
+      {
+        day: "Day 2",
+        title:
+          "Mohore Danda → Fulbari → Poon Hill → Ghorepani → Bhanthati → Pokhara",
+        detail:
+          "The next morning, we woke up as early as possible because we didn't want to miss the sunrise. The weather had been cloudy and foggy for most of the previous day, but luckily, the clouds cleared for a few precious hours. The mountain views were absolutely mesmerizing. We captured photographs and videos, made TikTok videos, and enjoyed the beautiful scenery together.\n\nAfter enjoying the sunrise and having breakfast, we started our return journey. Instead of following the same trail we had taken on the first day, we decided to explore a different route through Poon Hill and Ghorepani.\n\nOn the way, we first headed towards Fulbari, a beautiful spot recommended by some local people. We spent some time there, enjoyed the surroundings, and took a short rest before continuing towards Poon Hill.\n\nInterestingly, there were hardly any people at Poon Hill when we arrived. That gave us plenty of space to take photographs and make TikTok videos without disturbance. We spent some time enjoying the place before heading towards Ghorepani.\n\nOnce we reached Ghorepani, we took another break, ate the snacks we had packed, and captured more photographs and videos. After resting for a while, we continued our descent towards Bhanthati.\n\nBy the time we reached Bhanthati, everyone was ready for lunch. We had local chowmein with meat, with everyone choosing according to their preference. After lunch, we hired a jeep and started our drive back to Pokhara.\n\nEven the journey back was full of entertainment. We played Antakshari, laughed, joked around, and enjoyed the remaining moments together. Eventually, we reached Harichowk, where we went our separate ways and headed home.",
       },
     ],
   },
