@@ -334,36 +334,36 @@ export const treks: Trek[] = [
   // },
 
   {
-    slug: "khoke-danda",
+    slug: "kokhe-danda",
     video: [
       {
-        src: "/travel/khoke-danda/4.mp4",
+        src: "/travel/kokhe-danda/4.mp4",
         poster: "",
       },
       {
-        src: "/travel/khoke-danda/1.mp4",
+        src: "/travel/kokhe-danda/1.mp4",
         poster: "",
       },
       {
-        src: "/travel/khoke-danda/2.mp4",
+        src: "/travel/kokhe-danda/2.mp4",
         poster: "",
       },
       {
-        src: "/travel/khoke-danda/3.mp4",
+        src: "/travel/kokhe-danda/3.mp4",
         poster: "",
       },
     ],
-    title: "Khoke Danda",
+    title: "Kokhe Danda",
     region: "Annapurna, Nepal",
-    year: "2025",
+    year: "2026",
     note: "A two-day adventure with seven friends, rainy trails, beautiful rhododendron forests, and unexpected changes of plan. From an unforgettable evening at Mohore Danda to a clear sunrise over the mountains, every moment became a memory.",
-    photos: gallery("khoke-danda", "Khoke Danda", 18),
+    photos: gallery("kokhe-danda", "kokhe Danda", 18),
 
     content: (
       <p>
         What started as a trip planned for six people turned into an adventure
         with eight of us. Despite the rainy and foggy weather on the first day
-        and an unexpected accommodation problem at Khoke Danda, we made the most
+        and an unexpected accommodation problem at Kokhe Danda, we made the most
         of the journey. Staying at Mohore Danda turned out to be a great
         decision, where we spent the evening laughing, dancing, and playing
         cards. The following morning rewarded us with a beautiful sunrise and
@@ -377,9 +377,9 @@ export const treks: Trek[] = [
       {
         day: "Day 1",
         title:
-          "Pokhara → Bhanthati → Ama Cottage, Taprang → Khoke Danda → Mohore Danda",
+          "Pokhara → Bhanthati → Ama Cottage, Taprang → kokhe Danda → Mohore Danda",
         detail:
-          "We started our journey early in the morning, around 6 AM, from Harichowk, Pokhara. Although we had originally planned the trip for six people, our group eventually grew to eight. We hired a jeep at Harichowk, had our breakfast there, and headed directly towards Bhanthati. After reaching Bhanthati, we had lunch and took some time to rest before beginning our trek.\n\nUnfortunately, the weather was not on our side. It was a rainy and foggy day, and visibility was quite poor. However, the trail was surrounded by beautiful rhododendron trees. Their natural beauty, together with the dense forest, made the journey enjoyable despite the unpleasant weather.\n\nAfter walking through the forest, we reached Ama Cottage in Taprang. There was a relatively flat and open area where we took a break, clicked photographs, enjoyed some snacks, and, as usual, some of my friends started making TikTok videos. After spending some time there, we continued towards Khoke Danda, enjoying the natural scenery along the way.\n\nWe had already booked accommodation for all eight of us at Appa Cottage in Khoke Danda. Unfortunately, due to a misunderstanding with the hotel staff, our reservation was not available when we arrived. Instead of getting stuck there, we decided to continue towards Mohore Danda. Looking back, it turned out to be a great decision because several rooms were available, and we managed to arrange accommodation for everyone.\n\nWe stayed at the community lodge at Mohore Danda, associated with Mahabir Pun's community tourism initiative. After settling in, we spent the evening laughing, dancing, cracking jokes, playing cards, and enjoying each other's company. Sometimes, the unexpected parts of a journey become the best memories.",
+          "We started our journey early in the morning, around 6 AM, from Harichowk, Pokhara. Although we had originally planned the trip for six people, our group eventually grew to eight. We hired a jeep at Harichowk, had our breakfast there, and headed directly towards Bhanthati. After reaching Bhanthati, we had lunch and took some time to rest before beginning our trek.\n\nUnfortunately, the weather was not on our side. It was a rainy and foggy day, and visibility was quite poor. However, the trail was surrounded by beautiful rhododendron trees. Their natural beauty, together with the dense forest, made the journey enjoyable despite the unpleasant weather.\n\nAfter walking through the forest, we reached Ama Cottage in Taprang. There was a relatively flat and open area where we took a break, clicked photographs, enjoyed some snacks, and, as usual, some of my friends started making TikTok videos. After spending some time there, we continued towards kokhe Danda, enjoying the natural scenery along the way.\n\nWe had already booked accommodation for all eight of us at Appa Cottage in kokhe Danda. Unfortunately, due to a misunderstanding with the hotel staff, our reservation was not available when we arrived. Instead of getting stuck there, we decided to continue towards Mohore Danda. Looking back, it turned out to be a great decision because several rooms were available, and we managed to arrange accommodation for everyone.\n\nWe stayed at the community lodge at Mohore Danda, associated with Mahabir Pun's community tourism initiative. After settling in, we spent the evening laughing, dancing, cracking jokes, playing cards, and enjoying each other's company. Sometimes, the unexpected parts of a journey become the best memories.",
       },
       {
         day: "Day 2",
